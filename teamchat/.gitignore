@@ -1,0 +1,30 @@
+../venv/  # Virtual environment
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+
+# Environment
+.env
+.venv
+env/
+chat_env/
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# Database
+*../fitness.db
+*.rdb
+*.db
+*.sqlite
+*.sqlite3
+*../database.py
+# Logs
+logs/
+*.log
