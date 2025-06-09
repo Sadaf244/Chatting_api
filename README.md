@@ -1,6 +1,7 @@
 # Team Chat Application 
 
 ## Features
+
 Real-time Messaging
 WebSocket-based chat with presence tracking
 Message history persistence
@@ -14,6 +15,7 @@ Date range filtering
 User-specific message filtering
 
 ### Setup Steps
+
 # Clone repository
 git clone https://github.com/Sadaf244/Chatting_api.git
 cd teamchat
@@ -25,7 +27,6 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Configure database in settings.py
 # Run migrations
 python manage.py makemigrations
 python manage.py migrate
@@ -119,41 +120,39 @@ http://localhost:8000/api/channels/{channel_id}/search/`
 http://localhost:8000/api/channels/{channel_id}/messages/
 **Response Body:
 {
-    "count": 4,
-    "next": null,
-    "previous": null,
-    "results": [
-        {
-            "id": 5,
-            "channel": 6,
-            "sender": 9,
-            "username": "neha",
-            "user_avatar": null,
-            "content": "I am good too",
-            "timestamp": "2025-06-06T20:35:25.527454Z",
-            "edited": false,
-            "edited_at": null,
-            "parent": null
-        },
- ## See status
+"count": 4,
+"next": null,
+"previous": null,
+"results": [
+{
+"id": 5,
+"channel": 6,
+"sender": 9,
+"username": "neha",
+"user_avatar": null,
+"content": "I am good too",
+"timestamp": "2025-06-06T20:35:25.527454Z",
+"edited": false,
+"edited_at": null,
+"parent": null
+},
+## See status
 http://localhost:8000/api/auth/profile/
 Response Body:
 {
-    "id": 8,
-    "username": "nai74052",
-    "email": "nai4@gmail.com",
-    "online": true,
-    "last_seen": "2025-06-06T20:34:10.421232Z",
-    "avatar": null
-}
+"id": 8,
+"username": "nai74052",
+"email": "nai4@gmail.com",
+"online": true,
+"last_seen": "2025-06-06T20:34:10.421232Z",
+"avatar": null
 
 Schedule:
-Presence cleanup runs every 5 minutes
-📦 Dependencies
-Component	Purpose
-Django	Core application framework
-DRF	REST API implementation
-sqlite	Primary data store
-Redis	Caching and message brokering
-Celery	Background task processing
-Channels	WebSocket support
+Presence cleanup every 5 minutes
+
+## Dependencies
+Component             Purpose
+Django                Core application framework
+DRF REST API          implementation
+sqlite                Primary data store
+Redis                 Caching and message brokering
